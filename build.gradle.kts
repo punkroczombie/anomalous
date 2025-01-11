@@ -1,8 +1,8 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-group = "com.example" // TODO: Change this to your group
-version = "1.0-SNAPSHOT" // TODO: Change this to your addon version
+group = "com.zombie.anomalous"
+version = "1.0-SNAPSHOT"
 
 plugins {
     alias(libs.plugins.kotlin)
@@ -14,10 +14,14 @@ repositories {
     mavenCentral()
     maven("https://papermc.io/repo/repository/maven-public/")
     maven("https://repo.xenondevs.xyz/releases")
+    maven("https://mvn.lumine.io/repository/maven-public/")
 }
+
+
 
 dependencies {
     paperweight.paperDevBundle(libs.versions.paper)
+    compileOnly("com.ticxo.modelengine:ModelEngine:R4.0.4")
     implementation(libs.nova)
 }
 
@@ -26,8 +30,8 @@ addon {
     name = project.name.replaceFirstChar(Char::uppercase)
     version = project.version.toString()
     novaVersion = libs.versions.nova
-    main = "com.example.ExampleAddon" // TODO: Change this to your main class
-    authors = listOf("ExampleAuthor") // TODO: Set your list of authors
+    main = "com.zombie.anomalous.Anomalous"
+    authors = listOf("Zombie")
 }
 
 tasks {

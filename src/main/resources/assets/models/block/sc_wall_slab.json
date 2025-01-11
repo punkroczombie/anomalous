@@ -1,0 +1,23 @@
+{
+	"parent": "nova:block/block",
+	"texture_size": [512, 512],
+	"textures": {
+		"0": "anomalous:block/wall_block",
+		"1": "anomalous:block/wall_block_top_bot",
+		"particle": "anomalous:block/wall_block"
+	},
+	"elements": [
+		{
+			"from": [0, 0, 0],
+			"to": [16, 8, 16],
+			"faces": {
+				"north": {"uv": [0, 8, 16, 16], "texture": "#0", "cullface": "north"},
+				"east": {"uv": [0, 8, 16, 16], "texture": "#0", "cullface": "east"},
+				"south": {"uv": [0, 8, 16, 16], "texture": "#0", "cullface": "south"},
+				"west": {"uv": [0, 8, 16, 16], "texture": "#0", "cullface": "west"},
+				"up": {"uv": [0, 0, 16, 16], "texture": "#1"},
+				"down": {"uv": [0, 0, 16, 16], "texture": "#1", "cullface": "down"}
+			}
+		}
+	]
+}

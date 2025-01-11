@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "texture_size": [64, 64],
+  "textures": {
+    "layer0": "anomalous:item/ez_sign"
+  }
+}
