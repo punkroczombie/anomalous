@@ -1,6 +1,8 @@
 package com.zombie.anomalous.registry
 
 import com.zombie.anomalous.Anomalous
+import com.zombie.anomalous.item.DoorBehavior
+import com.zombie.anomalous.item.SwitchBehavior
 import xyz.xenondevs.nova.addon.registry.ItemRegistry
 import xyz.xenondevs.nova.initialize.Init
 import xyz.xenondevs.nova.initialize.InitStage
@@ -11,6 +13,13 @@ object Items : ItemRegistry by Anomalous.registry {
     val GATE_A_SIGN  = registerItem("gate_a_sign")
     val HCZ_SIGN = registerItem("hcz_sign")
     val EZ_SIGN = registerItem("ez_sign")
+
+    val STEEL_DOOR = item("steel_door") {
+        behaviors(DoorBehavior)
+    }
+    val SWITCH = item("switch") {
+        behaviors(SwitchBehavior)
+    }
 
     val ROAD = registerItem(Blocks.ROAD)
     val ROAD_MIDDLE = registerItem(Blocks.ROAD_MIDDLE)
@@ -33,34 +42,37 @@ object Items : ItemRegistry by Anomalous.registry {
     val SERVER_TOP = registerItem(Blocks.SERVER_TOP)
     val SERVER_BOTTOM = registerItem(Blocks.SERVER_BOTTOM)
     val TRIMMED_GLASS = registerItem(Blocks.TRIMMED_GLASS)
-    val EZ_SLOPED_WALL = registerItem(Blocks.EZ_SLOPED_WALL)
     val THIN_CONCRETE_WALL = registerItem(Blocks.THIN_CONCRETE_WALL)
     val VENT = registerItem(Blocks.VENT)
     val SC_WALL = registerItem(Blocks.SC_WALL)
-    val EZ_WALL = registerItem(Blocks.EZ_WALL)
-    val EZ_TRIMMED_WALL = registerItem(Blocks.EZ_TRIMMED_WALL)
-    val EZ_LINED_WALL = registerItem(Blocks.EZ_LINED_WALL)
+    val ORANGE_ZONE_WALL = registerItem(Blocks.ORANGE_ZONE_WALL)
+    val ORANGE_ZONE_TRIMMED_WALL = registerItem(Blocks.ORANGE_ZONE_TRIMMED_WALL)
+    val ORANGE_ZONE_LINED_WALL = registerItem(Blocks.ORANGE_ZONE_LINED_WALL)
+    val ORANGE_ZONE_SLOPED_WALL = registerItem(Blocks.ORANGE_ZONE_SLOPED_WALL)
+    val ORANGE_ZONE_FLIPPED_SLOPED_WALL = registerItem(Blocks.ORANGE_ZONE_FLIPPED_SLOPED_WALL)
+    val BLUE_ZONE_WALL = registerItem(Blocks.BLUE_ZONE_WALL)
+    val BLUE_ZONE_TRIMMED_WALL = registerItem(Blocks.BLUE_ZONE_TRIMMED_WALL)
+    val BLUE_ZONE_LINED_WALL = registerItem(Blocks.BLUE_ZONE_LINED_WALL)
+    val BLUE_ZONE_SLOPED_WALL = registerItem(Blocks.BLUE_ZONE_SLOPED_WALL)
+    val BLUE_ZONE_FLIPPED_SLOPED_WALL = registerItem(Blocks.BLUE_ZONE_FLIPPED_SLOPED_WALL)
+    val RED_ZONE_WALL = registerItem(Blocks.RED_ZONE_WALL)
+    val RED_ZONE_TRIMMED_WALL = registerItem(Blocks.RED_ZONE_TRIMMED_WALL)
+    val RED_ZONE_LINED_WALL = registerItem(Blocks.RED_ZONE_LINED_WALL)
+    val RED_ZONE_SLOPED_WALL = registerItem(Blocks.RED_ZONE_SLOPED_WALL)
+    val RED_ZONE_FLIPPED_SLOPED_WALL = registerItem(Blocks.RED_ZONE_FLIPPED_SLOPED_WALL)
     val CONCRETE_WALL = registerItem(Blocks.CONCRETE_WALL)
     val CONCRETE_CORNER = registerItem(Blocks.CONCRETE_CORNER)
     val CONCRETE_PILLAR = registerItem(Blocks.CONCRETE_PILLAR)
     val WHITE_PIPE = registerItem(Blocks.WHITE_PIPE)
     val CONCRETE_RAILING = registerItem(Blocks.CONCRETE_RAILING)
     val DRAIN_COVER = registerItem(Blocks.DRAIN_COVER)
-    val ROUND_CONCRETE_WALL_SLAB = registerItem(Blocks.ROUND_CONCRETE_WALL_SLAB)
-    val COPPER_DIAMOND_PLATE_SLAB = registerItem(Blocks.COPPER_DIAMOND_PLATE_SLAB)
-    val CERAMIC_TILES_SLAB = registerItem(Blocks.CERAMIC_TILES_SLAB)
-    val SC_WALL_SLAB = registerItem(Blocks.SC_WALL_SLAB)
-    val COPPER_DIAMOND_PLATE_STAIR = registerItem(Blocks.COPPER_DIAMOND_PLATE_STAIR)
-    val CERAMIC_TILES_STAIR = registerItem(Blocks.CERAMIC_TILES_STAIR)
-    val SC_WALL_STAIRS = registerItem(Blocks.SC_WALL_STAIRS)
-    val SWITCH_CLOSED = registerItem(Blocks.SWITCH_CLOSED)
-    val SWITCH = registerItem(Blocks.SWITCH)
     val TUNNEL_TOP = registerItem(Blocks.TUNNEL_TOP)
     val TUNNEL_BOTTOM = registerItem(Blocks.TUNNEL_BOTTOM)
     val INTERCOM_SPEAKER = registerItem(Blocks.INTERCOM_SPEAKER)
     val ZONE_WALL = registerItem(Blocks.ZONE_WALL)
     val ZONE_WALL_CORNER = registerItem(Blocks.ZONE_WALL_CORNER)
-    val HZ_WALL_CORNER = registerItem(Blocks.HZ_WALL_CORNER)
-    val HZ_WALL_SLOPE = registerItem(Blocks.HZ_WALL_SLOPE)
-    val HZ_WALL = registerItem(Blocks.HZ_WALL)
+    val HC_WALL_CORNER = registerItem(Blocks.HC_WALL_CORNER)
+    val HC_WALL_SLOPE = registerItem(Blocks.HC_WALL_SLOPE)
+    val HC_FLIPPED_WALL_SLOPE = registerItem(Blocks.HC_FLIPPED_WALL_SLOPE)
+    val HC_WALL = registerItem(Blocks.HC_WALL)
 }

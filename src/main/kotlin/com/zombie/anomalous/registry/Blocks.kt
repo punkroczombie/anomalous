@@ -1,7 +1,7 @@
 package com.zombie.anomalous.registry
 
 import com.zombie.anomalous.Anomalous
-import com.zombie.anomalous.behavior.BlockIlluminates
+import com.zombie.anomalous.block.BlockIlluminates
 import org.bukkit.Material
 import xyz.xenondevs.nova.addon.registry.BlockRegistry
 import xyz.xenondevs.nova.initialize.Init
@@ -226,15 +226,6 @@ object Blocks : BlockRegistry by Anomalous.registry {
                 stateBacked(BackingStateCategory.LEAVES)
             }
         }
-    val EZ_SLOPED_WALL =
-        block("ez_sloped_wall") {
-            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
-            stateProperties(FACING_HORIZONTAL)
-            models {
-                selectModel { defaultModel.rotated() }
-                stateBacked(BackingStateCategory.LEAVES)
-            }
-        }
     val THIN_CONCRETE_WALL =
         block("thin_concrete_wall") {
             behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
@@ -258,25 +249,121 @@ object Blocks : BlockRegistry by Anomalous.registry {
                 stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
             }
         }
-    val EZ_WALL =
-        block("ez_wall") {
+    val ORANGE_ZONE_WALL =
+        block("orange_zone_wall") {
             behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
             models {
                 stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
             }
         }
-    val EZ_TRIMMED_WALL =
-        block("ez_trimmed_wall") {
+    val ORANGE_ZONE_TRIMMED_WALL =
+        block("orange_zone_trimmed_wall") {
             behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
             models {
                 stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
             }
         }
-    val EZ_LINED_WALL =
-        block("ez_lined_wall") {
+    val ORANGE_ZONE_LINED_WALL =
+        block("orange_zone_lined_wall") {
             behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
             models {
                 stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
+            }
+        }
+    val ORANGE_ZONE_SLOPED_WALL =
+        block("orange_zone_sloped_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+                stateBacked(BackingStateCategory.LEAVES)
+            }
+        }
+    val ORANGE_ZONE_FLIPPED_SLOPED_WALL =
+        block("orange_zone_flipped_sloped_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+                stateBacked(BackingStateCategory.LEAVES)
+            }
+        }
+    val BLUE_ZONE_WALL =
+        block("blue_zone_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            models {
+                stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
+            }
+        }
+    val BLUE_ZONE_TRIMMED_WALL =
+        block("blue_zone_trimmed_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            models {
+                stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
+            }
+        }
+    val BLUE_ZONE_LINED_WALL =
+        block("blue_zone_lined_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            models {
+                stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
+            }
+        }
+    val BLUE_ZONE_SLOPED_WALL =
+        block("blue_zone_sloped_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+                stateBacked(BackingStateCategory.LEAVES)
+            }
+        }
+    val BLUE_ZONE_FLIPPED_SLOPED_WALL =
+        block("blue_zone_flipped_sloped_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+                stateBacked(BackingStateCategory.LEAVES)
+            }
+        }
+    val RED_ZONE_WALL =
+        block("red_zone_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            models {
+                stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
+            }
+        }
+    val RED_ZONE_TRIMMED_WALL =
+        block("red_zone_trimmed_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            models {
+                stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
+            }
+        }
+    val RED_ZONE_LINED_WALL =
+        block("red_zone_lined_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            models {
+                stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
+            }
+        }
+    val RED_ZONE_SLOPED_WALL =
+        block("red_zone_sloped_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+                stateBacked(BackingStateCategory.LEAVES)
+            }
+        }
+    val RED_ZONE_FLIPPED_SLOPED_WALL =
+        block("red_zone_flipped_sloped_wall") {
+            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+                stateBacked(BackingStateCategory.LEAVES)
             }
         }
     val CONCRETE_WALL =
@@ -329,81 +416,6 @@ object Blocks : BlockRegistry by Anomalous.registry {
                 stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
             }
         }
-    val ROUND_CONCRETE_WALL_SLAB =
-        block("round_concrete_wall_slab") {
-            behaviors(BlockDrops, STONE, BlockSounds(SoundGroup.STONE))
-            stateProperties(FACING_HORIZONTAL)
-            models {
-                stateBacked(BackingStateCategory.LEAVES)
-            }
-        }
-    val COPPER_DIAMOND_PLATE_SLAB =
-        block("copper_diamond_plate_slab") {
-            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
-            stateProperties(FACING_HORIZONTAL)
-            models {
-                stateBacked(BackingStateCategory.LEAVES)
-            }
-        }
-    val CERAMIC_TILES_SLAB =
-        block("ceramic_tiles_slab") {
-            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
-            models {
-                stateBacked(BackingStateCategory.LEAVES)
-            }
-        }
-    val SC_WALL_SLAB =
-        block("sc_wall_slab") {
-            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
-            models {
-                stateBacked(BackingStateCategory.LEAVES)
-            }
-        }
-    val COPPER_DIAMOND_PLATE_STAIR =
-        block("copper_diamond_plate_stair") {
-            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
-            stateProperties(FACING_HORIZONTAL)
-            models {
-                selectModel { defaultModel.rotated() }
-                stateBacked(BackingStateCategory.LEAVES)
-            }
-        }
-    val CERAMIC_TILES_STAIR =
-        block("ceramic_tiles_stair") {
-            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
-            stateProperties(FACING_HORIZONTAL)
-            models {
-                selectModel { defaultModel.rotated() }
-                stateBacked(BackingStateCategory.LEAVES)
-            }
-        }
-    val SC_WALL_STAIRS =
-        block("sc_wall_stairs") {
-            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
-            stateProperties(FACING_HORIZONTAL)
-            models {
-                selectModel { defaultModel.rotated() }
-                stateBacked(BackingStateCategory.LEAVES)
-            }
-        }
-    val SWITCH_CLOSED =
-        block("switch_closed") {
-            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
-            stateProperties(FACING_HORIZONTAL)
-            models {
-                selectModel { defaultModel.rotated() }
-                stateBacked(BackingStateCategory.valueOf("TRIPWIRE_ATTACHED"), BackingStateCategory.valueOf("TRIPWIRE_UNATTACHED"))
-            }
-        }
-    val SWITCH =
-        block("switch") {
-            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
-            stateProperties(FACING_HORIZONTAL)
-            models {
-                selectModel { defaultModel.rotated() }
-                stateBacked(BackingStateCategory.valueOf("TRIPWIRE_ATTACHED"), BackingStateCategory.valueOf("TRIPWIRE_UNATTACHED"))
-            }
-        }
     val TUNNEL_TOP =
         block("tunnel_top") {
             behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
@@ -447,8 +459,8 @@ object Blocks : BlockRegistry by Anomalous.registry {
                 stateBacked(BackingStateCategory.LEAVES)
             }
         }
-    val HZ_WALL_CORNER =
-        block("hz_wall_corner") {
+    val HC_WALL_CORNER =
+        block("hc_wall_corner") {
             behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
             stateProperties(FACING_HORIZONTAL)
             models {
@@ -456,8 +468,8 @@ object Blocks : BlockRegistry by Anomalous.registry {
                 stateBacked(BackingStateCategory.LEAVES)
             }
         }
-    val HZ_WALL_SLOPE =
-        block("hz_wall_slope") {
+    val HC_WALL_SLOPE =
+        block("hc_wall_slope") {
             behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
             stateProperties(FACING_HORIZONTAL)
             models {
@@ -465,13 +477,75 @@ object Blocks : BlockRegistry by Anomalous.registry {
                 stateBacked(BackingStateCategory.LEAVES)
             }
         }
-    val HZ_WALL =
-        block("hz_wall") {
+    val HC_FLIPPED_WALL_SLOPE =
+        block("hc_flipped_wall_slope") {
+            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+                stateBacked(BackingStateCategory.LEAVES)
+            }
+        }
+    val HC_WALL =
+        block("hc_wall") {
             behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
             models {
                 stateBacked(BackingStateCategory.MUSHROOM_BLOCK, BackingStateCategory.NOTE_BLOCK)
             }
         }
+
+    /*
+    @TODO: Implement the doors
+    val STEEL_DOOR_TOP =
+        tileEntity("steel_door_top", ::SteelDoorTopTileEntity) {
+            behaviors(
+                TileEntityInteractive
+            )
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+            }
+
+        }
+    val STEEL_DOOR_BOTTOM =
+        tileEntity("steel_door_bottom", ::SteelDoorBottomTileEntity) {
+            behaviors(
+                TileEntityInteractive
+            )
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+            }
+        }
+     */
+
+    /*
+    @Todo: Implement the switch
+    val SWITCH_CLOSED =
+        block("switch_closed") {
+            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+                stateBacked(
+                    BackingStateCategory.valueOf("TRIPWIRE_ATTACHED"),
+                    BackingStateCategory.valueOf("TRIPWIRE_UNATTACHED")
+                )
+            }
+        }
+    val SWITCH =
+        block("switch") {
+            behaviors(BlockDrops, METAL, BlockSounds(SoundGroup.METAL))
+            stateProperties(FACING_HORIZONTAL)
+            models {
+                selectModel { defaultModel.rotated() }
+                stateBacked(
+                    BackingStateCategory.valueOf("TRIPWIRE_ATTACHED"),
+                    BackingStateCategory.valueOf("TRIPWIRE_UNATTACHED")
+                )
+            }
+        }
+     */
 }
 
 

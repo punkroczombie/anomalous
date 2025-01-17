@@ -8,6 +8,7 @@ plugins {
     alias(libs.plugins.kotlin)
     alias(libs.plugins.paperweight)
     alias(libs.plugins.nova)
+    id("org.jetbrains.dokka") version "2.0.0"
 }
 
 repositories {
